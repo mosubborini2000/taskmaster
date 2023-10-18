@@ -9,9 +9,9 @@ I just create a 3 pages home page i have two buttons:
 1-move me to add task page that I can add task and submitt the task
 2- all tasks that is empty until now just I have image
 
-![Alt Text](../taskmaster/screenshot/lab26/home.PNG)
-![Alt Text](../taskmaster/screenshot/lab26/addtask.PNG)
-![Alt Text](../taskmaster/screenshot/lab26/allTask.PNG)
+![Alt Text](screenshot/lab26/home.PNG)
+![Alt Text](screenshot/lab26/addtask.PNG)
+![Alt Text](screenshot/lab26/allTask.PNG)
 
 ## lab27
 
@@ -26,10 +26,10 @@ I Created The main page different buttons with hardcoded task titles. When a use
 
 also I Created a Task Detail page used Lorem Ipsum description.
 
-![Alt Text](../screenshot/lab27/task1.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task2.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task3.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task4.PNG)
+![Alt Text](screenshot/lab27/task1.PNG)
+![Alt Text](screenshot/lab27/task2.PNG)
+![Alt Text](screenshot/lab27/task3.PNG)
+![Alt Text](screenshot/lab27/task4.PNG)
 
 
 
