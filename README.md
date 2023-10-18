@@ -26,7 +26,7 @@ I Created The main page different buttons with hardcoded task titles. When a use
 
 also I Created a Task Detail page used Lorem Ipsum description.
 
-![Alt Text](../taskmaster/screenshot/lab27/task1.PNG)
+![Alt Text](../screenshot/lab27/task1.PNG)
 ![Alt Text](../taskmaster/screenshot/lab27/task2.PNG)
 ![Alt Text](../taskmaster/screenshot/lab27/task3.PNG)
 ![Alt Text](../taskmaster/screenshot/lab27/task4.PNG)
