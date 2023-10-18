@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">taskmaster</string>
+    <string name="lorem1">Donec luctus molestie scelerisque. Suspendisse at risus eu tellus hendrerit mattis. Nullam lacinia semper tempus. Mauris in neque lacus. Aliquam tempus dapibus egestas. Pellentesque rutrum velit massa, vitae rhoncus quam viverra ac. Mauris efficitur, lectus eget molestie dapibus, tortor urna vulputate velit, sed sollicitudin metus nunc nec purus. Ut luctus elit enim. Vivamus sed risus eu quam mattis dignissim eget sit amet ipsum.</string>
+    <string name="username">username:</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_username">enter user name</string>
+    <string name="save">SAVE</string>
+    <string name="setting_page">setting page</string>
+    <string name="username_with_input">Username: %1$s</string>
 </resources>
