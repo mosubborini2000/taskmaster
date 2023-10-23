@@ -9,9 +9,9 @@ I just create a 3 pages home page i have two buttons:
 1-move me to add task page that I can add task and submitt the task
 2- all tasks that is empty until now just I have image
 
-![Alt Text](../taskmaster/screenshot/lab26/home.PNG)
-![Alt Text](../taskmaster/screenshot/lab26/addtask.PNG)
-![Alt Text](../taskmaster/screenshot/lab26/allTask.PNG)
+![Alt Text](screenshot/lab26/home.PNG)
+![Alt Text](screenshot/lab26/addtask.PNG)
+![Alt Text](screenshot/lab26/allTask.PNG)
 
 ## lab27
 
@@ -26,13 +26,18 @@ I Created The main page different buttons with hardcoded task titles. When a use
 
 also I Created a Task Detail page used Lorem Ipsum description.
 
-![Alt Text](../taskmaster/screenshot/lab27/task1.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task2.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task3.PNG)
-![Alt Text](../taskmaster/screenshot/lab27/task4.PNG)
+![Alt Text](screenshot/lab27/task1.PNG)
+![Alt Text](screenshot/lab27/task2.PNG)
+![Alt Text](screenshot/lab27/task3.PNG)
+![Alt Text](screenshot/lab27/task4.PNG)
 
+## lab27
 
+For today's lab ..
+I updated the home page to use a RecyclerView for displaying Task data. This has hardcoded Task data for now.
+I created a Task class. A Task should have a title, a body, and a state. The state should be one of “new”, “assigned”, “in progress”, or “complete”.
+when user click on anyone of tasks move him to details about this task 
 
-
-
-
+![Alt Text](screenshot/lab28/lab281.PNG)
+![Alt Text](screenshot/lab28/lab282.PNG)
+![Alt Text](screenshot/lab28/lab283.PNG)
