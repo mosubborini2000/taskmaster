@@ -31,7 +31,7 @@ also I Created a Task Detail page used Lorem Ipsum description.
 ![Alt Text](screenshot/lab27/task3.PNG)
 ![Alt Text](screenshot/lab27/task4.PNG)
 
-## lab27
+## lab28
 
 For today's lab ..
 I updated the home page to use a RecyclerView for displaying Task data. This has hardcoded Task data for now.
@@ -41,3 +41,15 @@ when user click on anyone of tasks move him to details about this task
 ![Alt Text](screenshot/lab28/lab281.PNG)
 ![Alt Text](screenshot/lab28/lab282.PNG)
 ![Alt Text](screenshot/lab28/lab283.PNG)
+
+
+## lab29
+
+For today's lab ..
+I updated the add Task page to add task to room database .
+I Updated a main page and detail when i click in one of tasks move me to detail of the class i added, to represent tabel in databse
+I fetched the data from the database to the home's RecyclerView
+
+![Alt Text](screenshot/lab29/lab291.PNG)
+![Alt Text](screenshot/lab29/java292.PNG)
+![Alt Text](screenshot/lab29/lab293.PNG)
