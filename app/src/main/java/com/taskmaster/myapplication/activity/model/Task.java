@@ -1,8 +1,13 @@
 package com.taskmaster.myapplication.activity.model;
 
-import com.taskmaster.myapplication.activity.enums.state;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+import com.taskmaster.myapplication.activity.enums.state;
+@Entity
 public class Task {
+    @PrimaryKey(autoGenerate = true)
+    private long id;
     String title;
     String body;
     com.taskmaster.myapplication.activity.enums.state state;
@@ -13,6 +18,13 @@ public class Task {
         this.state = state;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
     public String getTitle() {
         return title;
     }
