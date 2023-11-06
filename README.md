@@ -53,3 +53,14 @@ I fetched the data from the database to the home's RecyclerView
 ![Alt Text](screenshot/lab29/lab291.PNG)
 ![Alt Text](screenshot/lab29/java292.PNG)
 ![Alt Text](screenshot/lab29/lab293.PNG)
+
+## Lab31
+For today's lab ..
+
+Ensured espreeso tests are functional.
+
+Refactored Main Activity and all code
+![Alt Text](screenshot/lab31/sc1.PNG)
+![Alt Text](screenshot/lab31/sc2.PNG)
+![Alt Text](screenshot/lab31/sc3.PNG)
+

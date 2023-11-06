@@ -1,7 +1,6 @@
 package com.taskmaster.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import com.taskmaster.myapplication.R;
 import com.taskmaster.myapplication.activity.adapter.TaskListRecyclerVIewAdapter;
-import com.taskmaster.myapplication.activity.database.AppDatabase;
 import com.taskmaster.myapplication.activity.enums.state;
 import com.taskmaster.myapplication.activity.model.Task;
 
@@ -24,18 +22,12 @@ import java.util.List;
 public class AddTaskActivity extends AppCompatActivity {
     int count = 0 ;
 //    public static  final String DATABASE_NAME = "tasks_stuff";
-    AppDatabase appDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
-        appDatabase = Room.databaseBuilder(
-                        getApplicationContext(),
-                        AppDatabase.class
-                ,"tasks_stuff")
-                .allowMainThreadQueries()
-                .build();
+
         Spinner taskCategorySpinner = (Spinner) findViewById(R.id.spinner);
         taskCategorySpinner.setAdapter(new ArrayAdapter<>(
                 this,
@@ -62,7 +54,8 @@ public class AddTaskActivity extends AppCompatActivity {
                         ((EditText) findViewById(R.id.bodyText)).getText().toString(),
                         state.fromString(taskCategorySpinner.getSelectedItem().toString())
                 );
-                appDatabase.taskDao().insertTask(newTask);
+                //to do
+             //   appDatabase.taskDao().insertTask(newTask);
             }
         });
 
