@@ -3,8 +3,6 @@ package com.taskmaster.myapplication.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.room.Room;
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 
 import com.taskmaster.myapplication.R;
 import com.taskmaster.myapplication.activity.adapter.TaskListRecyclerVIewAdapter;
-import com.taskmaster.myapplication.activity.database.AppDatabase;
 import com.taskmaster.myapplication.activity.enums.state;
 import com.taskmaster.myapplication.activity.model.Task;
 
@@ -30,22 +27,15 @@ public class MainActivity extends AppCompatActivity {
     public static final String USER_USERNAME_TAG = "userUsername";
     public static  final String DATABASE_NAME = "tasks_stuff";
     TaskListRecyclerVIewAdapter adapter;
-    AppDatabase appDatabase;
-    List<Task> tasks=null;
+
+   // List<Task> tasks=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
-        appDatabase = Room.databaseBuilder(
-                        getApplicationContext(),
-                        AppDatabase.class,
-                        DATABASE_NAME)
-                .fallbackToDestructiveMigration()
-                .allowMainThreadQueries()
-                .build();
-        tasks= appDatabase.taskDao().findAll();
+      //  tasks= appDatabase.taskDao().findAll();
         setUpProductListRecyclerView();
         Button addTaskButton = findViewById(R.id.btnAddTask);
         Button allTasksButton = findViewById(R.id.btnAllTasks);
@@ -87,19 +77,20 @@ public class MainActivity extends AppCompatActivity {
         String username = preferences.getString(SettingActivity.USER_USERNAME_TAG, "No Username");
 
         ((TextView)findViewById(R.id.txtUsername)).setText(getString(R.string.username_with_input, username));
-        tasks.clear();
-        tasks.addAll(appDatabase.taskDao().findAll());
-        adapter.notifyDataSetChanged();
+//        tasks.clear();
+//        tasks.addAll(appDatabase.taskDao().findAll());
+//        adapter.notifyDataSetChanged();
     }
 
 
     private void setUpProductListRecyclerView(){
+        List<Task> tasks=new ArrayList<>();
 
         RecyclerView taskListRecycleReview = (RecyclerView) findViewById(R.id.HomeListRecyclerView);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         taskListRecycleReview.setLayoutManager(layoutManager);
-
+        tasks.add(new Task("challenges", "Do your daily challenges ", state.IN_PROGRESS));
         adapter = new TaskListRecyclerVIewAdapter(tasks, this);
         taskListRecycleReview.setAdapter(adapter);
 
