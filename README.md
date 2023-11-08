@@ -64,3 +64,13 @@ Refactored Main Activity and all code
 ![Alt Text](screenshot/lab31/sc2.PNG)
 ![Alt Text](screenshot/lab31/sc3.PNG)
 
+## Lab31
+For today's lab ..
+
+Updated all references to the Task data to instead use AWS Amplify to access data in DynamoDB instead of in Room.
+Modified Add Task to save the data entered in as a Task to DynamoDB.
+get all tasks from DynamoDB to render it in Main Activity
+Ensured espreeso tests are work fine.
+
+![Alt Text](screenshot/lab32/sc32.PNG)
+![Alt Text](screenshot/lab32/sc322.PNG)

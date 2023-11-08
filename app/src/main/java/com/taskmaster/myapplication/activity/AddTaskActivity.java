@@ -2,8 +2,8 @@ package com.taskmaster.myapplication.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,17 +12,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amplifyframework.api.graphql.model.ModelMutation;
+import com.amplifyframework.core.Amplify;
+import com.amplifyframework.datastore.generated.model.State;
+import com.amplifyframework.datastore.generated.model.Task;
 import com.taskmaster.myapplication.R;
-import com.taskmaster.myapplication.activity.adapter.TaskListRecyclerVIewAdapter;
-import com.taskmaster.myapplication.activity.enums.state;
-import com.taskmaster.myapplication.activity.model.Task;
-
-import java.util.List;
 
 public class AddTaskActivity extends AppCompatActivity {
     int count = 0 ;
 //    public static  final String DATABASE_NAME = "tasks_stuff";
-
+public static final String TAG = "AddTaskActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,7 @@ public class AddTaskActivity extends AppCompatActivity {
         taskCategorySpinner.setAdapter(new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
-                state.values()));
+                State.values()));
 
 
 
@@ -49,10 +48,22 @@ public class AddTaskActivity extends AppCompatActivity {
                 totalView.setText(String.valueOf(count++));
                 toast.show();
 
-                Task newTask=new Task(
-                        ((EditText) findViewById(R.id.titleText)).getText().toString(),
-                        ((EditText) findViewById(R.id.bodyText)).getText().toString(),
-                        state.fromString(taskCategorySpinner.getSelectedItem().toString())
+//                Task newTask=new Task(
+//                        ((EditText) findViewById(R.id.titleText)).getText().toString(),
+//                        ((EditText) findViewById(R.id.bodyText)).getText().toString(),
+//                        State.fromString(taskCategorySpinner.getSelectedItem().toString())
+//                );
+                String title = ((EditText)findViewById(R.id.titleText)).getText().toString();
+                String body = ((EditText)findViewById(R.id.bodyText)).getText().toString();
+                Task newTask = Task.builder()
+                        .title(title)
+                        .body(body)
+                        .state((State) taskCategorySpinner.getSelectedItem()).build();
+
+                Amplify.API.mutate(
+                        ModelMutation.create(newTask),
+                        successResponse -> Log.i(TAG, "AddTaskActivity.onCreate(): made a Task successfully"),//success response
+                        failureResponse -> Log.e(TAG, "AddTaskActivity.onCreate(): failed with this response" + failureResponse)// in case we have a failed response
                 );
                 //to do
              //   appDatabase.taskDao().insertTask(newTask);
