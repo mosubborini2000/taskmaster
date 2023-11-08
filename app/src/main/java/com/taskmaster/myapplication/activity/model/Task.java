@@ -1,16 +1,16 @@
 package com.taskmaster.myapplication.activity.model;
 
 
-import com.taskmaster.myapplication.activity.enums.state;
+import com.taskmaster.myapplication.activity.enums.State;
 
 public class Task {
 
     private long id;
     String title;
     String body;
-    com.taskmaster.myapplication.activity.enums.state state;
+    State state;
 
-    public Task(String title, String body, com.taskmaster.myapplication.activity.enums.state state) {
+    public Task(String title, String body, State state) {
         this.title = title;
         this.body = body;
         this.state = state;
@@ -39,11 +39,11 @@ public class Task {
         this.body = body;
     }
 
-    public com.taskmaster.myapplication.activity.enums.state getState() {
+    public State getState() {
         return state;
     }
 
-    public void setState(  com.taskmaster.myapplication.activity.enums.state     state) {
+    public void setState(  State state) {
         this.state = state;
     }
 }
