@@ -75,7 +75,7 @@ Ensured espreeso tests are work fine.
 ![Alt Text](screenshot/lab32/sc32.PNG)
 ![Alt Text](screenshot/lab32/sc322.PNG)
 
-## Lab31
+## Lab33
 For today's lab ..
 
 I Updated tasks to be owned by teams by Created a second entity for a team by adding a relation.
