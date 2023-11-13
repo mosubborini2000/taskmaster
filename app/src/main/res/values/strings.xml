@@ -7,6 +7,8 @@
     <string name="save">SAVE</string>
     <string name="setting_page">setting page</string>
     <string name="username_with_input">Username: %1$s</string>
+    <string name="teamname_with_input">Team: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_team">No Team</string>
 </resources>
