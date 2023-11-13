@@ -74,3 +74,23 @@ Ensured espreeso tests are work fine.
 
 ![Alt Text](screenshot/lab32/sc32.PNG)
 ![Alt Text](screenshot/lab32/sc322.PNG)
+
+## Lab31
+For today's lab ..
+
+I Updated tasks to be owned by teams by Created a second entity for a team by adding a relation.
+
+I created 3 Teams (Mosuab,ahmad,mohammad).
+
+I created a spinner in add task page to selected a team when task added.
+
+in Settings Page,allow the user to choose their team on the Settings page,
+filter tasks  to display only that team’s tasks on the homepage.
+
+Finally,I added a new test to ensure that every thing is working good related to new entity I added and spinner to selected the team, i ensured that every thing is Ok.
+
+![Alt Text](screenshot/lab33/lab331.PNG)
+![Alt Text](screenshot/lab33/lab332.PNG)
+![Alt Text](screenshot/lab33/lab333.PNG)
+![Alt Text](screenshot/lab33/lab334.PNG)
+![Alt Text](screenshot/lab33/lab335.PNG)
