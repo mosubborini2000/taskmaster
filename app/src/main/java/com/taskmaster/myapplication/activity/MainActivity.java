@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     public static final String TASK_Title_TAG = "taskName";
     public static final String TASK_BODY_TAG = "BODY";
     public static final String TASK_STATE_TAG = "STATE";
-//    public static final String USER_USERNAME_TAG = "userUsername";
+    public static final String MAIN_ID_TAG = "Main ID Tag";
+
+    //    public static final String USER_USERNAME_TAG = "userUsername";
 //    public static  final String DATABASE_NAME = "tasks_stuff";
     public final String TAG = "taskActivity";
 
