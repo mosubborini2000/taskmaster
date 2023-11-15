@@ -101,17 +101,19 @@ I was able to add updates(description ,title,team,state ) of the task,and able t
 
 I will put my screen shots and explain the process:
 
-firs image I created to tasks and called same name (new task)
+1-firs image I created to tasks and called same name (new task)
+
+2-second image I edit the title and all details for this task
+
+3-third image you can see the change in the task after edit
+
+4-fourth image I want to delete that one of new task I did not edit
+5- last image  you can see the tasks after I delete new task (it's deleted)
+
+
 ![Alt Text](screenshot/lab34/lab341.PNG)
-
-here I edit the title and all details for this task
 ![Alt Text](screenshot/lab34/lab342.PNG)
-
-here you can see the change in the task after edit
 ![Alt Text](screenshot/lab34/lab343.PNG)
-
-here I want to delete that one of new task I didnot edit
 ![Alt Text](screenshot/lab34/lab344.PNG)
-here you can see the tasks after I delete new task (it's deleted)
 ![Alt Text](screenshot/lab34/lab345.PNG)
 
