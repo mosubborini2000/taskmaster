@@ -1,5 +1,6 @@
 package com.taskmaster.myapplication.activity.adapter;
 
+import static com.taskmaster.myapplication.activity.MainActivity.MAIN_ID_TAG;
 import static com.taskmaster.myapplication.activity.MainActivity.TASK_BODY_TAG;
 import static com.taskmaster.myapplication.activity.MainActivity.TASK_STATE_TAG;
 import static com.taskmaster.myapplication.activity.MainActivity.TASK_Title_TAG;
@@ -16,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.amplifyframework.datastore.generated.model.Task;
 import com.taskmaster.myapplication.R;
+import com.taskmaster.myapplication.activity.EditTasksActivity;
 import com.taskmaster.myapplication.activity.TaskDetailsActivity;
 
 
@@ -42,6 +44,8 @@ public class TaskListRecyclerVIewAdapter extends RecyclerView.Adapter<TaskListRe
     @Override
     public void onBindViewHolder(@NonNull TaskListViewHolder holder, int position) {
         TextView taskFragmentTextView = (TextView) holder.itemView.findViewById(R.id.taskFragmentTextViewHome);
+        Task task = tasks.get(position);
+
         taskFragmentTextView.setText(tasks.get(position).getTitle());
         String taskTitle = tasks.get(position).getTitle();
         String taskBody = tasks.get(position).getBody();
@@ -50,7 +54,8 @@ public class TaskListRecyclerVIewAdapter extends RecyclerView.Adapter<TaskListRe
 
         View taskViewHolder = holder.itemView;
         taskViewHolder.setOnClickListener(view -> {
-            Intent goToViewTaskFormIntent = new Intent(callingActivity, TaskDetailsActivity.class);
+            Intent goToViewTaskFormIntent = new Intent(callingActivity, EditTasksActivity.class);
+            goToViewTaskFormIntent.putExtra(MAIN_ID_TAG, task.getId());
             goToViewTaskFormIntent.putExtra(TASK_BODY_TAG, taskBody);
             goToViewTaskFormIntent.putExtra(TASK_Title_TAG, taskTitle);
             goToViewTaskFormIntent.putExtra(TASK_STATE_TAG, taskState);

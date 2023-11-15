@@ -94,3 +94,24 @@ Finally,I added a new test to ensure that every thing is working good related to
 ![Alt Text](screenshot/lab33/lab333.PNG)
 ![Alt Text](screenshot/lab33/lab334.PNG)
 ![Alt Text](screenshot/lab33/lab335.PNG)
+
+## Lab34
+For today's lab ..
+I was able to add updates(description ,title,team,state ) of the task,and able to  deletes the tasks.
+
+I will put my screen shots and explain the process:
+
+firs image I created to tasks and called same name (new task)
+![Alt Text](screenshot/lab34/lab341.PNG)
+
+here I edit the title and all details for this task
+![Alt Text](screenshot/lab34/lab342.PNG)
+
+here you can see the change in the task after edit
+![Alt Text](screenshot/lab34/lab343.PNG)
+
+here I want to delete that one of new task I didnot edit
+![Alt Text](screenshot/lab34/lab344.PNG)
+here you can see the tasks after I delete new task (it's deleted)
+![Alt Text](screenshot/lab34/lab345.PNG)
+
