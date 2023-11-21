@@ -117,5 +117,30 @@ I will put my screen shots and explain the process:
 ![Alt Text](screenshot/lab34/lab344.PNG)
 ![Alt Text](screenshot/lab34/lab345.PNG)
 
-## Lab35
+## Lab36
 For today's lab ..
+
+1. Add Cognito to Amplify setup:
+
+Integrate Cognito into the Amplify configuration.
+2. Implement user login and signup flow:
+
+Develop a user interface for logging in and signing up.
+Connect the login and signup forms to Cognito authentication services.
+3. Display username on homepage:
+
+Upon successful user login, retrieve the username from Cognito.
+Display the username prominently at the top of the homepage.
+4. Enable user logout:
+
+Implement a logout button or mechanism within the application.
+Upon user logout, clear authentication tokens and redirect the user to a non-logged-in state.
+![Alt Text](screenshot/lab36/lab361.PNG)
+![Alt Text](screenshot/lab36/lab362.PNG)
+![Alt Text](screenshot/lab36/lab363.PNG)
+![Alt Text](screenshot/lab36/lab364.PNG)
+![Alt Text](screenshot/lab36/lab365.PNG)
+![Alt Text](screenshot/lab36/lab366.PNG)
+
+
+
