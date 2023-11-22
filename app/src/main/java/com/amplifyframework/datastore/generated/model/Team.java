@@ -2,6 +2,8 @@ package com.amplifyframework.datastore.generated.model;
 
 import com.amplifyframework.core.model.annotations.HasMany;
 import com.amplifyframework.core.model.temporal.Temporal;
+
+
 import java.util.List;
 import java.util.UUID;
 import java.util.Objects;
@@ -21,7 +23,7 @@ import static com.amplifyframework.core.model.query.predicate.QueryField.field;
 
 /** This is an auto generated class representing the Team type in your schema. */
 @SuppressWarnings("all")
-@ModelConfig(pluralName = "Teams", authRules = {
+@ModelConfig(pluralName = "Teams",  authRules = {
   @AuthRule(allow = AuthStrategy.PUBLIC, operations = { ModelOperation.CREATE, ModelOperation.UPDATE, ModelOperation.DELETE, ModelOperation.READ })
 })
 public final class Team implements Model {
@@ -37,23 +39,23 @@ public final class Team implements Model {
    public String resolveIdentifier() {
     return id;
   }
-
+  
   public String getId() {
       return id;
   }
-
+  
   public String getName() {
       return name;
   }
-
+  
   public List<Task> getTasks() {
       return tasks;
   }
-
+  
   public Temporal.DateTime getCreatedAt() {
       return createdAt;
   }
-
+  
   public Temporal.DateTime getUpdatedAt() {
       return updatedAt;
   }
@@ -180,5 +182,8 @@ public final class Team implements Model {
       return (CopyOfBuilder) super.name(name);
     }
   }
+  
+
+
   
 }
