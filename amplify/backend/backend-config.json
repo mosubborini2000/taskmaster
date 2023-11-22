@@ -7,7 +7,7 @@
           "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
             "apiKeyConfig": {
-              "apiKeyExpirationDate": "2024-01-19T22:00:04.126Z",
+              "apiKeyExpirationDate": "2024-01-20T21:46:35.985Z",
               "apiKeyExpirationDays": 60,
               "description": "this api key for models to be generated in cloud"
             },
@@ -45,6 +45,13 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
+    }
+  },
+  "storage": {
+    "taskmasterstorage": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

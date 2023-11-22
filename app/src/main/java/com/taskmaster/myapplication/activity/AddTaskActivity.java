@@ -25,7 +25,7 @@ import java.util.concurrent.ExecutionException;
 
 public class AddTaskActivity extends AppCompatActivity {
 
-public static final String TAG = "AddTaskActivity";
+    public static final String TAG = "AddTaskActivity";
     Spinner taskCategorySpinner = null;
     Spinner teamSpinner = null;
     CompletableFuture<List<Team>> teamsFuture = new CompletableFuture<>();
@@ -48,7 +48,7 @@ public static final String TAG = "AddTaskActivity";
     }
 
     private void setUpSpinners() {
-    teamSpinner= (Spinner) findViewById(R.id.spinnerteam);
+        teamSpinner= (Spinner) findViewById(R.id.spinnerteam);
         Amplify.API.query(
                 ModelQuery.list(Team.class),
                 success ->
