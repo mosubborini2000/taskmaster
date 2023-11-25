@@ -1,6 +1,5 @@
 package com.taskmaster.myapplication.activity;
 
-import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,10 +25,6 @@ import com.taskmaster.myapplication.R;
 import com.taskmaster.myapplication.activity.adapter.TaskListRecyclerVIewAdapter;
 
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     List<Task> tasks=null;
     TaskListRecyclerVIewAdapter adapter;
-
 
 
 
@@ -87,7 +81,6 @@ public class MainActivity extends AppCompatActivity {
 //                successResponse -> Log.i(TAG, "MainActivity.onCreate(): made a team successfully"),
 //                failureResponse -> Log.i(TAG, "MainActivity.onCreate(): team failed with this response: "+failureResponse)
 //        );
-
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
         tasks = new ArrayList<>();
         Amplify.API.query(
@@ -142,34 +135,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         });
-        String emptyFilename= "emptyTestFileName";
-        File emptyFile = new File(getApplicationContext().getFilesDir(), emptyFilename);
-
-        try {
-            BufferedWriter emptyFileBufferedWriter= new BufferedWriter(new FileWriter(emptyFile));
-
-            emptyFileBufferedWriter.append("Some text here from mosuab\nAnother libe from mosuab");
-
-            emptyFileBufferedWriter.close();
-        }catch (IOException ioe){
-            Log.i(TAG, "could not write locally with filename: "+ emptyFilename);
-        }
-
-        String emptyFileS3Key = "someFileOnS3.txt";
-        Amplify.Storage.uploadFile(
-                emptyFileS3Key,
-                emptyFile,
-                success ->
-                {
-                    Log.i(TAG, "S3 upload succeeded and the Key is: " + success.getKey());
-                },
-                failure ->
-                {
-                    Log.i(TAG, "S3 upload failed! " + failure.getMessage());
-                }
-        );
-
-    setUpLoginAndLogoutButton();
+        setUpLoginAndLogoutButton();
     }
 
     @Override

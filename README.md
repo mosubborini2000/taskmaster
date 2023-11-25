@@ -142,5 +142,8 @@ Upon user logout, clear authentication tokens and redirect the user to a non-log
 ![Alt Text](screenshot/lab36/lab365.PNG)
 ![Alt Text](screenshot/lab36/lab366.PNG)
 
-
-
+##  Lab36
+For today's lab ..
+In today's lab I implemented AWS S3 that allowed user to store task images and display them.
+![Alt Text](screenshot/lab37/lab371.PNG)
+![Alt Text](screenshot/lab37/lab372.PNG)
