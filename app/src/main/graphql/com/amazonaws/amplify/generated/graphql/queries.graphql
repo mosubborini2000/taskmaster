@@ -36,6 +36,7 @@ query GetTask($id: ID!) {
     title
     body
     state
+    taskImageS3Key
     teamId
     teamName {
       id
@@ -61,6 +62,7 @@ query ListTasks(
       title
       body
       state
+      taskImageS3Key
       teamId
       createdAt
       updatedAt
@@ -124,6 +126,7 @@ query TasksByTeamIdAndTitle(
       title
       body
       state
+      taskImageS3Key
       teamId
       createdAt
       updatedAt
