@@ -142,8 +142,15 @@ Upon user logout, clear authentication tokens and redirect the user to a non-log
 ![Alt Text](screenshot/lab36/lab365.PNG)
 ![Alt Text](screenshot/lab36/lab366.PNG)
 
-##  Lab36
+##  Lab37
 For today's lab ..
 In today's lab I implemented AWS S3 that allowed user to store task images and display them.
 ![Alt Text](screenshot/lab37/lab371.PNG)
 ![Alt Text](screenshot/lab37/lab372.PNG)
+
+## lab38
+For today's lab ..
+I Added an intent filter to my application that a user can hit the “share” button on an image in another application.
+![Alt Text](screenshot/lab38/lab381.PNG)
+![Alt Text](screenshot/lab38/lab382.PNG)
+

@@ -66,6 +66,48 @@ public class AddTaskActivity extends AppCompatActivity {
         updateImageButtons();
     }
 
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+
+        Intent callingIntent = getIntent();
+        if (callingIntent != null && callingIntent.getType() != null && callingIntent.getType().equals("text/plain")) {
+            String callingText = callingIntent.getStringExtra(Intent.EXTRA_TEXT);
+
+            if (callingText != null) {
+                String cleanedText = cleanText(callingText);
+
+                ((EditText) findViewById(R.id.titleText)).setText(cleanedText);
+            }
+        }
+
+        if(callingIntent != null && callingIntent.getType() != null && callingIntent.getType().startsWith("image") ){
+            Uri incomingImageFileUri= callingIntent.getParcelableExtra(Intent.EXTRA_STREAM);
+
+            if (incomingImageFileUri != null){
+                InputStream incomingImageFileInputStream = null;
+
+                try {
+                    incomingImageFileInputStream = getContentResolver().openInputStream(incomingImageFileUri);
+
+                    ImageView productImageView = findViewById(R.id.taskImageImageView);
+
+                    if (productImageView != null) {
+
+                        productImageView.setImageBitmap(BitmapFactory.decodeStream(incomingImageFileInputStream));
+                    }else {
+                        Log.e(TAG, "ImageView is null for some reasons");
+                    }
+                }catch (FileNotFoundException fnfe){
+                    Log.e(TAG," Could not get file stram from the URI "+fnfe.getMessage(),fnfe);
+                }
+            }
+        }
+
+    }
+
     private void setUpEditableUIElement() {
         titleEditText = findViewById(R.id.titleText);
         descriptionEditText = findViewById(R.id.bodyText);
@@ -302,5 +344,14 @@ public class AddTaskActivity extends AppCompatActivity {
             }
         }
         return null;
+    }
+    private String cleanText(String text) {
+        // Remove links
+        text = text.replaceAll("\\b(?:https?|ftp):\\/\\/\\S+\\b", "");
+
+        // Remove double quotes
+        text = text.replaceAll("\"", "");
+
+        return text;
     }
 }
