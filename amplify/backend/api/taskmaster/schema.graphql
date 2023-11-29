@@ -19,6 +19,8 @@ type Task @model @auth(rules: [{allow: public}]){
     body: String
     state: State
     taskImageS3Key: String
+    taskLongitude:String
+    taskLatitude:String
     teamId: ID! @index(name: "byTeam", sortKeyFields: ["title"])
     teamName: Team @belongsTo(fields: ["teamId"])
 }
