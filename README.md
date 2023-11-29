@@ -154,3 +154,10 @@ I Added an intent filter to my application that a user can hit the “share” b
 ![Alt Text](screenshot/lab38/lab381.PNG)
 ![Alt Text](screenshot/lab38/lab382.PNG)
 
+## lab38
+For today's lab ..
+I get the latitude and longitude to get the current location and display it in the Task Details Activity.
+![Alt Text](screenshot/lab39/lab391.PNG)
+![Alt Text](screenshot/lab39/lab392.PNG)
+![Alt Text](screenshot/lab39/lab393.PNG)
+

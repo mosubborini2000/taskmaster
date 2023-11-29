@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
@@ -38,6 +39,9 @@ public class EditTasksActivity extends AppCompatActivity {
     private Spinner taskSpinner = null;
 
     private Spinner teamSpinner = null;
+
+    private TextView textViewLong = null;
+    private TextView textViewLat = null;
 
     private String s3ImageKey = "";
 
@@ -95,6 +99,12 @@ public class EditTasksActivity extends AppCompatActivity {
         titleEditText.setText(taskToEdit.getTitle());
         descriptionEditText = ((EditText) findViewById(R.id.desceditTextText2));
         descriptionEditText.setText(taskToEdit.getBody());
+
+        textViewLong = findViewById(R.id.textViewLong);
+        textViewLong.setText(taskToEdit.getTaskLongitude());
+
+        textViewLat = findViewById(R.id.textViewLat);
+        textViewLat.setText(taskToEdit.getTaskLatitude());
 
         s3ImageKey = taskToEdit.getTaskImageS3Key();
         if (s3ImageKey != null && !s3ImageKey.isEmpty())
