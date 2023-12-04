@@ -154,10 +154,18 @@ I Added an intent filter to my application that a user can hit the “share” b
 ![Alt Text](screenshot/lab38/lab381.PNG)
 ![Alt Text](screenshot/lab38/lab382.PNG)
 
-## lab38
+## lab39
 For today's lab ..
 I get the latitude and longitude to get the current location and display it in the Task Details Activity.
 ![Alt Text](screenshot/lab39/lab391.PNG)
 ![Alt Text](screenshot/lab39/lab392.PNG)
 ![Alt Text](screenshot/lab39/lab393.PNG)
 
+## lab38
+For today's lab ..
+Added Analytics  Pinpoint. Everytime a user enters the main Activity or add task, it's recorded.
+On task details(when uset click on any task):
+Added button when click on it  hear Task description spoken.
+![Alt Text](screenshot/lab41/lab411.PNG)
+![Alt Text](screenshot/lab41/lab412.PNG)
+![Alt Text](screenshot/lab41/lab413.PNG)

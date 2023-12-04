@@ -27,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 
+import com.amplifyframework.analytics.AnalyticsEvent;
 import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.core.Amplify;
@@ -47,6 +48,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.CompletableFuture;
@@ -72,11 +74,20 @@ public class AddTaskActivity extends AppCompatActivity {
 
 
     private String s3ImageKey = "";
+    private void analytic() {
+        AnalyticsEvent event = AnalyticsEvent.builder()
+                .name("taskDetails")
+                .addProperty("time", Long.toString(new Date().getTime()))
+                .addProperty("trackingEvent", " main activity opened")
+                .build();
 
+        Amplify.Analytics.recordEvent(event);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
+        analytic();
 
         teamFuture = new CompletableFuture<>();
 
