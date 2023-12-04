@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.amplifyframework.AmplifyException;
+import com.amplifyframework.analytics.AnalyticsEvent;
 import com.amplifyframework.api.graphql.model.ModelMutation;
 import com.amplifyframework.api.graphql.model.ModelQuery;
 import com.amplifyframework.auth.AuthUser;
@@ -26,6 +28,7 @@ import com.taskmaster.myapplication.activity.adapter.TaskListRecyclerVIewAdapter
 
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -43,7 +46,17 @@ public class MainActivity extends AppCompatActivity {
     List<Task> tasks=null;
     TaskListRecyclerVIewAdapter adapter;
 
+    private void init(){
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        tasks = new ArrayList<>();
+        AnalyticsEvent event = AnalyticsEvent.builder()
+                .name("openedApp")
+                .addProperty("time", Long.toString(new Date().getTime()))
+                .addProperty("trackingEvent", " main activity opened")
+                .build();
 
+        Amplify.Analytics.recordEvent(event);
+    }
 
     // List<Task> tasks=null;
     @Override
@@ -81,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
 //                successResponse -> Log.i(TAG, "MainActivity.onCreate(): made a team successfully"),
 //                failureResponse -> Log.i(TAG, "MainActivity.onCreate(): team failed with this response: "+failureResponse)
 //        );
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        tasks = new ArrayList<>();
+
+        init();
         Amplify.API.query(
                 ModelQuery.list(Task.class),
                 success ->
@@ -100,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                 },
                 failure -> Log.i(TAG, "Did not read task successfully")
         );
+
 
         //  tasks= appDatabase.taskDao().findAll();
         setUpProductListRecyclerView();
@@ -137,6 +151,18 @@ public class MainActivity extends AppCompatActivity {
         });
         setUpLoginAndLogoutButton();
     }
+
+//    private void analysis() {
+//        try {
+//
+//            Amplify.configure(getApplicationContext());
+//
+//            Log.i("MyAmplifyApp", "Initialized Amplify");
+//        } catch (AmplifyException error) {
+//            Log.e("MyAmplifyApp", "Could not initialize Amplify", error);
+//        }
+//    }
+
 
     @Override
     protected void onResume() {

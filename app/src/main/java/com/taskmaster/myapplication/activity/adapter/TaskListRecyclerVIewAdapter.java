@@ -54,7 +54,7 @@ public class TaskListRecyclerVIewAdapter extends RecyclerView.Adapter<TaskListRe
 
         View taskViewHolder = holder.itemView;
         taskViewHolder.setOnClickListener(view -> {
-            Intent goToViewTaskFormIntent = new Intent(callingActivity, EditTasksActivity.class);
+            Intent goToViewTaskFormIntent = new Intent(callingActivity, TaskDetailsActivity.class);
             goToViewTaskFormIntent.putExtra(MAIN_ID_TAG, task.getId());
             goToViewTaskFormIntent.putExtra(TASK_BODY_TAG, taskBody);
             goToViewTaskFormIntent.putExtra(TASK_Title_TAG, taskTitle);

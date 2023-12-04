@@ -1,0 +1,14 @@
+{
+    "resourceName": "speechGenerator5a8c748c",
+    "convertPolicyName": "speechGeneratorPolicy5a8c748c",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "convertType": "speechGenerator",
+    "language": "en-US",
+    "voice": "Kimberly",
+    "access": "authAndGuest"
+}
